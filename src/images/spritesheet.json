@@ -1,0 +1,135 @@
+{
+	"frames": {
+		"orb00.png": {
+			"frame": {
+				"x": 1,
+				"y": 1,
+				"w": 570,
+				"h": 507
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 570,
+				"h": 507
+			},
+			"sourceSize": {
+				"w": 570,
+				"h": 507
+			}
+		},
+		"orb01.png": {
+			"frame": {
+				"x": 573,
+				"y": 1,
+				"w": 570,
+				"h": 507
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 570,
+				"h": 507
+			},
+			"sourceSize": {
+				"w": 570,
+				"h": 507
+			}
+		},
+		"orb02.png": {
+			"frame": {
+				"x": 1,
+				"y": 510,
+				"w": 570,
+				"h": 507
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 570,
+				"h": 507
+			},
+			"sourceSize": {
+				"w": 570,
+				"h": 507
+			}
+		},
+		"orb03.png": {
+			"frame": {
+				"x": 573,
+				"y": 510,
+				"w": 570,
+				"h": 507
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 570,
+				"h": 507
+			},
+			"sourceSize": {
+				"w": 570,
+				"h": 507
+			}
+		},
+		"orb04.png": {
+			"frame": {
+				"x": 1145,
+				"y": 1,
+				"w": 570,
+				"h": 507
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 570,
+				"h": 507
+			},
+			"sourceSize": {
+				"w": 570,
+				"h": 507
+			}
+		},
+		"orb05.png": {
+			"frame": {
+				"x": 1145,
+				"y": 510,
+				"w": 570,
+				"h": 507
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 570,
+				"h": 507
+			},
+			"sourceSize": {
+				"w": 570,
+				"h": 507
+			}
+		}
+	},
+	"meta": {
+		"app": "http://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"image": "spritesheet.png",
+		"format": "RGBA8888",
+		"size": {
+			"w": 1716,
+			"h": 1018
+		},
+		"scale": "1"
+	}
+}

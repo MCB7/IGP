@@ -1,13 +1,15 @@
 import React, {useState, useEffect} from 'react';
 import { Heading } from './components/Heading';
 import { Loader } from './components/Loader';
-import { UnsplashImage } from './components/UnsplashImage';
+import { UnsplashImage } from './components/UnsplashImage'; ///old
 
 import InfiniteScroll from 'react-infinite-scroll-component';
  
-import axios from 'axios';
+import axios from 'axios';///old unsplash
 import styled from 'styled-components'
 import { createGlobalStyle } from 'styled-components';
+
+
 
 
 // style
@@ -30,11 +32,6 @@ const GlobalStyle = createGlobalStyle`
 }
 `;
 
-const Gallery = styled.body`
-
-
-
-`;
 //mobile should be padding-bottom: 200 px:
 const WrapperImage = styled.section`
 max-width: 70rem;
@@ -54,11 +51,6 @@ grid-auto-rows: 500px;
 
 `; 
 
-const ImageOrganizer = styled.img`
- 
-
-
-`;
 
 
 function App() {
@@ -66,19 +58,27 @@ function App() {
     return r.keys().map(r);
 
   }
+
+
+
+  
   const listOfImages = importAll(require.context('./images/', false, /\.(png|jpe?g|svg)$/));
 
-   const [images, setImages] = useState([]);
-  
-   useEffect(() => {  
-   
-     const apiRoot = "https://api.unsplash.com";
-     const accessKey = process.env.REACT_APP_ACCESSKEY
 
-     axios
-      .get(`${apiRoot}/photos/random?client_id=${accessKey}&count=10`)
-      .then(res => setImages([...images, ...res.data]))
-   }, [])
+  
+   useEffect(() => {
+    fetchImages();
+  }, [])
+
+    const fetchImages = () => {
+      listOfImages.map(
+        (image, index) =><img key={index} src={image.default} alt="info"></img>
+      ) 
+    };
+      
+
+  
+
 
 
   return (
@@ -86,19 +86,17 @@ function App() {
      <Heading />
      <GlobalStyle />
      <InfiniteScroll
-        dataLength={images.length}
-        next={fetchImages}
-        hasMore={true}
-        loader={<Loader />}
+       dataLength={listOfImages.length}
+       next={fetchImages}
+       hasMore={true}
+       loader={<Loader />}
       >
      
-     <ImageOrganizer />
-     
-     <Loader />
-     
+   
      <WrapperImage>
        
      {
+       
                     listOfImages.map(
                       (image, index) =><img key={index} src={image.default} alt="info"></img>
                     )                   

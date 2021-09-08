@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
+import { Stage, Sprite } from '@inlet/react-pixi';
+
 
 const Header = styled.header`
     max-width: 70rem;
@@ -15,11 +17,23 @@ const H1 = styled.header`
 
 `;
 
+const width = 400;
+const height = 400;
+
 export const Heading = () => {
     return (
         <Header>
-            <h1>ALEXIS SKINNER</h1>
-            <p>HAIR STYLIST</p>
+            <Stage>
+            <Sprite
+            anchor={0.5}
+            scale={5}
+            x={width / 2}
+            y={height / 2}
+            image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/693612/IaUrttj.png"
+          />
+            </Stage>
         </Header>
     )
 }
+
+/// ABOVE IS THE REACT-PIXI STUFF LIKE SPRITE(the bunny) THE STAGE(the invisble reality that the rabbit inhabits that lays ontop of the canvas)
